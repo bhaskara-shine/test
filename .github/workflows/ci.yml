@@ -17,7 +17,7 @@ jobs:
         run: docker build -t mongomaintainer:${{ github.sha }} .
 
       - name: Trivy image scan
-        uses: aquasecurity/trivy-action@0.36.0
+        uses: aquasecurity/trivy-action@0.35.0
         with:
           image-ref: mongomaintainer:${{ github.sha }}
           severity: HIGH,CRITICAL
